@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MedIntel AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="app-layout">
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+
+        <h2>
+            💬 Chats
+        </h2>
+
+        <button id="newChatBtn">
+            ➕ New Chat
+        </button>
+
+    </div>
+
+    <div class="history-title">
+        Recent Reports
+    </div>
+
+    <div
+        id="historyList"
+        class="history-list">
+    </div>
+
+    <!-- Logged in User -->
+    <div class="user-profile">
+
+    <div class="avatar">
+        {{ username[0]|upper }}
+    </div>
+
+    <div class="user-name">
+        {{ username }}
+    </div>
+
+</div>
+
+</aside>
+
+
+
+
+
+    <!-- ================= Main ================= -->
+
+    <main class="container">
+
+        <!-- ================= Top Bar ================= -->
+<div class="top-bar">
+
+    <div>
+
+        <h1>MedIntel AI</h1>
+
+        <p class="subtitle">
+            AI-powered Medical Intelligence Platform
+        </p>
+
+    </div>
+
+    <div class="top-buttons">
+
+        <button
+            id="exportBtn"
+            class="export-btn">
+
+            📥 Export Chat
+
+        </button>
+        
+        
+        <button
+            id="logoutBtn"
+            class="logout-btn">
+
+            🚪 Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+        <!-- ================= Chat Area ================= -->
+
+        <div
+            class="chat-box"
+            id="chatBox">
+
+            <div class="welcome">
+
+                <h2>
+                    Welcome 👋
+                </h2>
+
+                <p>
+                    Upload a medical report and ask questions about it.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- ================= Quick Actions ================= -->
+
+        <div class="quick-actions">
+
+            <button onclick="askQuick('Summarize this medical report')">
+                📄 Summary
+            </button>
+
+            <button onclick="askQuick('What is the diagnosis and key findings?')">
+                🔍 Diagnosis
+            </button>
+
+            <button onclick="askQuick('Explain this medical report in simple language')">
+                🩺 Explain Report
+            </button>
+
+            <button onclick="askQuick('What is the recommended treatment and follow-up?')">
+                💊 Treatment
+            </button>
+
+        </div>
+
+
+
+
+
+
+        <!-- ================= Input Area ================= -->
+
+        <div class="input-area">
+
+            <!-- Hidden PDF Input -->
+
+            <input
+                type="file"
+                id="pdfFile"
+                accept=".pdf"
+                hidden
+            >
+
+            <!-- Upload Button -->
+
+            <button
+                id="uploadBtn"
+                class="upload-btn">
+
+                Upload
+
+            </button>
+
+            <!-- Question -->
+
+            <input
+                type="text"
+                id="questionInput"
+                placeholder="Ask anything about your report..."
+            >
+
+            <!-- Send -->
+
+            <button
+                id="sendBtn">
+
+                Send
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+
+
+<!-- ================= Disclaimer ================= -->
+
+<footer class="medical-disclaimer">
+
+⚕️ <strong>Medical AI Assistant:</strong>
+
+This tool provides information based on uploaded medical documents.
+It is not a substitute for professional medical diagnosis or treatment.
+Please consult a qualified healthcare professional.
+
+</footer>
+
+<script src="/static/js/app.js"></script>
+
+</body>
+
+</html>

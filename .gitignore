@@ -1,0 +1,34 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Database
+medtrace.db
+
+# Uploaded PDFs
+uploads/
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Chroma Vector Database
+chroma_db/
+
+# Exported chat files
+exports/
